@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use(cookieParser)
+app.use(cookieParser())
 
 const corsOptions = {
   origin: ["http://localhost:5173"],
@@ -22,7 +22,7 @@ app.use(cors(corsOptions))
 const PORT = process.env.PORT || 5001
 
 // api's
-app.use("/api/user", userRoute);
+app.use("/api/users", userRoute);
 // app.use("/api/company", companyRoute);
 // app.use("/api/job", jobRoute);
 // app.use("/api/application", applicationRoute);
