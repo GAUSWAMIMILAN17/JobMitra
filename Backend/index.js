@@ -2,7 +2,8 @@ import express from "express";
 import dotenv from "dotenv"
 import cors from "cors"
 import cookieParser from "cookie-parser";
-import connectDB from "./utils/db";
+import connectDB from "./utils/db.js";
+import userRoute from "./routes/user.routes.js"
 
 dotenv.config({})
 const app = express();
